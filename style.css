@@ -1,81 +1,124 @@
-body {
-  font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #f7f9fc;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
+  color: #333;
 }
 
 .form-section {
-  margin-top: 50px;
-  background: white;
+  background-color: #ffffff;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 90%;
-  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.form-section:hover {
+  transform: translateY(-2px);
 }
 
 .form-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .input-label {
   display: block;
-  margin-bottom: 0.3rem;
-  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
 }
 
 .form-input {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: border 0.3s;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-input:focus {
-  border-color: #007bff;
+  border-color: #0077ff;
+  box-shadow: 0 0 0 4px rgba(0, 119, 255, 0.2);
   outline: none;
 }
 
 .submit-btn {
-  background-color: #007bff;
-  color: white;
+  background-color: #0077ff;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
   border: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .submit-btn:hover {
-  background-color: #0056b3;
+  background-color: #005fcc;
+  transform: scale(1.03);
 }
 
 .message {
   margin-top: 1rem;
-  color: red;
+  color: crimson;
+  font-weight: bold;
+  text-align: center;
 }
 
+/* ===== People Section ===== */
 .people-section {
-  margin-top: 3rem;
-  width: 90%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.people-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #222;
 }
 
 .people-list-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
 }
 
 .person-card {
   background: #ffffff;
-  padding: 1rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.person-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.person-card p {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.person-card strong {
+  color: #0077ff;
 }
