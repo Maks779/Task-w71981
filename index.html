@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form with Validation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="form-section">
+    <form id="user-form">
+      <div class="form-group">
+        <label class="input-label" for="fullName">Full Name</label>
+        <input class="form-input" type="text" id="fullName" name="fullName" required />
+      </div>
+      <div class="form-group">
+        <label class="input-label" for="email">Email Address</label>
+        <input class="form-input" type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label class="input-label" for="age">Age</label>
+        <input class="form-input" type="number" id="age" name="age" required />
+      </div>
+      <div class="form-group">
+        <label class="input-label" for="hobby">Hobby</label>
+        <input class="form-input" type="text" id="hobby" name="hobby" required />
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+      <p id="message" class="message"></p>
+    </form>
+  </section>
+
+  <section class="people-section">
+    <h2>Qualified People (Over 18)</h2>
+    <div id="people-list" class="people-list-grid"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
